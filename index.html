@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 7 - Cake Shop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.result').hide()
+
+
+            $('#button').click(function() {
+                var a = parseInt($('#color_cake').val())
+                var b = parseInt($('#brown_cake').val())
+                var c = parseInt($('#milky_cake').val())
+                var d = parseInt($('#black_forest').val())
+                var cost = a * 300 + b * 200 + c * 250 + d * 350
+                var e = $('#cost').text("Rs." + cost)
+                $('.result').show()
+                console.log(cost)
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1 class="title">Cake Shop</h1>
+
+    <div class="cake_images">
+        <figure>
+            <img class="img1" src="./assets/Color Cake.jpg" alt="Color Cake">
+            <figcaption>Order Cake Rs.300</figcaption>
+        </figure>
+        <figure>
+            <img class="img2" src="./assets/Brown Cake.jpg" alt="Brown Cake">
+            <figcaption>Brown Cake Rs.200</figcaption>
+        </figure>
+        <figure>
+            <img class="img3" src="./assets/Milky Cake.jpg" alt="Milky Cake">
+            <figcaption>Milky Cake Rs.250</figcaption>
+        </figure>
+        <figure>
+            <img class="img4" src="./assets/Black Forest.jpg" alt="Black Forest Cake" width="740">
+            <figcaption>Black Forest Cake Rs.250</figcaption>
+        </figure>
+    </div>
+
+
+    <div class="calculations">
+        <h2>
+            Order Cake
+        </h2>
+        <div class="inputs">
+            <label>
+            Color Cake(Quantity)
+        </label>
+            <br>
+
+            <input type="text" id="color_cake">
+            <br />
+            <label>
+            Brown Cake(Quantity)
+        </label>
+            <br>
+            <input type="text" id="brown_cake">
+            <br />
+
+            <label>
+            Milky Cake(Quantity)
+        </label>
+            <br>
+            <input type="text" id="milky_cake">
+            <br />
+
+            <label>
+            Black Forest Cake(Quantity)
+        </label>
+            <br>
+            <input type="text" id="black_forest">
+        </div>
+        <button id="button">Place Order</button>
+        <hr>
+        <div class="result">
+            <h1 class="bill">Purchase Order Bill !!</h1>
+            <p class="price">Total Price </p>
+            <span id="cost">Rs.0</span>
+            <p class="name">Created By SARATHI R URK20CS1081</p>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
